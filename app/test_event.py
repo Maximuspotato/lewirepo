@@ -4,15 +4,18 @@ from event import Event
 
 class userTest(unittest.TestCase):
     def setUp(self):
-        self.bbq=Event("bbqlive","entertainment","kicc","lewis")
-        self.eve
+        self.dunda=Event("bbqlive","entertainment","kicc")
 
     def testadd(self):
-        self.bbq.addEvent("bbqlive","entertainment","kicc","lewis")
-        self.assertEqual(self.bbq.name,"bbqlive",msg="invalid name")
+        self.dunda.addEvent("bbqlive","entertainment","kicc")
+        self.assertEqual(self.dunda.name,"bbqlive",msg="invalid name")
+        self.assertEqual(self.dunda.category,"entertainment",msg="invalid name")
+        self.assertEqual(self.dunda.location,"kicc",msg="invalid name")
 
     def testUpdate(self):
-        self.bbq.addEvent("raveup","entertainment","uhuru gardens","eve")
-        self.assertEqual(self.bbq.name,"rave",msg="invalid name")
+        self.dunda.modifyEvent("raveup","entertainment","uhuru gardens")
+        self.assertEqual(self.dunda.name,"raveup",msg="invalid name")
+        self.assertEqual(self.dunda.category,"entertainment",msg="invalid name")
+        self.assertEqual(self.dunda.location,"uhuru gardens",msg="invalid name")
 
     

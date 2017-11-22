@@ -2,5 +2,6 @@
   "test_event.py::userTest::testUpdate": true, 
   "test_event.py::userTest::testadd": true, 
   "test_user.py::userTest::testLogin": true, 
-  "test_user.py::userTest::testRegistration": true
+  "test_user.py::userTest::testRegistration": true, 
+  "tests/test_user.py": true
 }
