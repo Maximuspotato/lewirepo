@@ -25,12 +25,12 @@ class Event(object):
             self.location=""
             return self.name, self.category, self.location
         else:
-            pass
+            raise ValueError
 
     def searchEvent(self,name):
         if name==self.name:
             return self.name, self.category, self.location
         else:
-            pass
+            raise ValueError
 
 

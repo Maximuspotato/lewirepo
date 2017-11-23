@@ -1,6 +1,6 @@
 import unittest
 
-from user import User
+from app.user import User
 
 class userTest(unittest.TestCase):
     def setUp(self):
@@ -10,6 +10,7 @@ class userTest(unittest.TestCase):
         self.lewis.regUser("rickylui28@gmail.com","pass","pass")
         self.assertEqual(self.lewis.email,"rickylui28@gmail.com",msg="invalid email")
         self.assertEqual(self.lewis.password,"pass",msg="invalid password")
+        print(self.lewis.users)
 
     def testLogin(self):
         self.lewis.logUser("rickylui28@gmail.com","pass")

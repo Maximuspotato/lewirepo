@@ -1,4 +1,5 @@
 {
   "test_user.py::userTest::testRegistration": true, 
+  "tests/test_event.py": true, 
   "tests/test_user.py": true
 }
