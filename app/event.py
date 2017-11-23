@@ -13,11 +13,24 @@ class Event(object):
 
 
     def modifyEvent(self,name,category,location):
-        #if name==self.name and category==self.category and location==self.location:
         self.name=name
         self.category=category
         self.location=location
         return self.name, self.category, self.location
-        #else:
-            #pass
+
+    def deleteEvent(self,name):
+        if name==self.name:
+            self.name=""
+            self.category=""
+            self.location=""
+            return self.name, self.category, self.location
+        else:
+            pass
+
+    def searchEvent(self,name):
+        if name==self.name:
+            return self.name, self.category, self.location
+        else:
+            pass
+
 

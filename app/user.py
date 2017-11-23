@@ -1,3 +1,4 @@
+from validate_email import validate_email
 class User(object):
     #initialize the class
     def __init__(self,email,password):
@@ -6,9 +7,21 @@ class User(object):
 
     #register users
     def regUser(self,regEmail, regPassword, regConPassowrd):
-        self.email=regEmail
-        self.password=regPassword
-        regConPassowrd=self.password
+        if validate_email(regEmail)==True:
+            self.email=regEmail
+        else:
+            pass
+
+        if len(regPassword)>=8:
+            self.password=regPassword
+        else:
+            pass
+
+        if regConPassowrd==self.password:
+            regConPassowrd=self.password
+        else:
+            pass
+
         return self.email, self.password, regConPassowrd
     
     #login user
@@ -17,3 +30,10 @@ class User(object):
             return logEmail, logPassword
         else:
             pass
+
+    def delUser(self,uEmail):
+        if uEmail==self.email:
+            self.email=""
+            self.password=""
+            return self.email, self.password
+        
